@@ -1,0 +1,94 @@
+from flask import Flask, request, redirect
+import pymysql
+
+app = Flask(_name_)
+
+# 🔹 Home page (View + Form)
+@app.route('/')
+def home():
+    conn = pymysql.connect(
+        host='database-1.c3u8s2coubdp.ap-south-1.rds.amazonaws.com',
+        user='admin',
+        password='Paru2002',
+        database='myappdb'
+    )
+
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users")
+    data = cursor.fetchall()
+    conn.close()
+
+    html = "<h2>User List</h2>"
+
+    # 🔹 Table
+    html += "<table border=1>"
+    html += "<tr><th>ID</th><th>Name</th><th>Email</th><th>Action</th></tr>"
+
+    for row in data:
+        html += f"""
+        <tr>
+            <td>{row[0]}</td>
+            <td>{row[1]}</td>
+            <td>{row[2]}</td>
+            <td>
+                <a href='/delete/{row[0]}'>Delete</a>
+            </td>
+        </tr>
+        """
+
+    html += "</table>"
+
+    # 🔹 Form (Add user)
+    html += """
+    <h3>Add User</h3>
+    <form method="POST" action="/add">
+        Name: <input type="text" name="name"><br><br>
+        Email: <input type="text" name="email"><br><br>
+        <input type="submit" value="Add User">
+    </form>
+    """
+
+    return html
+
+
+# 🔹 Add user
+@app.route('/add', methods=['POST'])
+def add_user():
+    name = request.form['name']
+    email = request.form['email']
+
+    conn = pymysql.connect(
+        host='database-1.c3u8s2coubdp.ap-south-1.rds.amazonaws.com',
+        user='admin',
+        password='Paru2002',
+        database='myappdb'
+    )
+
+    cursor = conn.cursor()
+    cursor.execute("INSERT INTO users (name, email) VALUES (%s, %s)", (name, email))
+    conn.commit()
+    conn.close()
+
+    return redirect('/')
+
+
+# 🔹 Delete user
+@app.route('/delete/<int:id>')
+def delete_user(id):
+    conn = pymysql.connect(
+        host='database-1.c3u8s2coubdp.ap-south-1.rds.amazonaws.com',
+        user='admin',
+        password='Paru2002',
+        database='myappdb'
+    )
+
+    cursor = conn.cursor()
+    cursor.execute("DELETE FROM users WHERE id=%s", (id,))
+    conn.commit()
+    conn.close()
+
+    return redirect('/')
+
+
+# 🔹 Run app
+app.run(host='0.0.0.0', port=5000, debug=True)
