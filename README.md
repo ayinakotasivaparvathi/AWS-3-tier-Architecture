@@ -9,7 +9,7 @@ The architecture is divided into three layers: Presentation, Application, and Da
 ---
 
 ## 🏗️ Architecture Diagram
-![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/aws%203-tier%20Architecture.png)
+![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/AWS%203tier%20Architecture/Architecture-3%20tier.png)
 
 ## ⚙️ AWS Services Used
 
