@@ -9,9 +9,7 @@ The architecture is divided into three layers: Presentation, Application, and Da
 ---
 
 ## 🏗️ Architecture Diagram
-
-
-
+![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/Architecture-3%20tier.png)
 
 ## ⚙️ AWS Services Used
 
@@ -37,24 +35,24 @@ The architecture is divided into three layers: Presentation, Application, and Da
 8. Implemented Load Balancer for traffic distribution.
 
 ---
+### VPC Dash borad![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/Screenshot%202026-04-04%20114950.png)
 
+### vpc ![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/Screenshot%202026-04-04%20115018.png)
 
+### Subnets![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/Screenshot%202026-04-04%20115108.png)
 
-### VPC
+### Internet Gateway ![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/Screenshot%202026-04-04%20115243.png)
 
-### Subnets
+### Route Table ![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/Screenshot%202026-04-04%20115327.png)
 
-### Internet Gateway
+### EC2 Instances ![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/Screenshot%202026-04-04%20115535.png)
 
-### Route Table
+### Load Balancer ![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/Screenshot%202026-04-04%20115719.png)
 
-### EC2 Instances
+### RDS ![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/Screenshot%202026-04-04%20115759.png)
 
-### Output
-
-### RDS
-
-### Load Balancer
+### Output ![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/Screenshot%202026-04-04%20115828.png)
+![alt text](https://github.com/ayinakotasivaparvathi/AWS-3-tier-Architecture/blob/main/Screenshot%202026-04-04%20120113.png)
 
 ---
 
