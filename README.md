@@ -1,16 +1,11 @@
-# AWS-3-tier-Architecture
+# AWS-3-tier-Architecture Project 🚀
 This project demonstrates a 3-tier architecture on AWS using EC2, VPC, RDS, and Load Balancer.
-# AWS 3-Tier Architecture Project 🚀
-
 👩‍💻 **Created by:** Siva Parvathi Ayinakota
-
 ---
-
 ## 📌 Overview
 
 This project demonstrates the implementation of a 3-tier architecture on AWS.
 The architecture is divided into three layers: Presentation, Application, and Database to ensure scalability, security, and high availability.
-
 ---
 
 ## 🏗️ Architecture Diagram
